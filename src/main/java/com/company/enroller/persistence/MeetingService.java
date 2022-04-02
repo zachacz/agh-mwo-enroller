@@ -2,8 +2,8 @@ package com.company.enroller.persistence;
 
 import java.util.Collection;
 
-import org.hibernate.Query;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 
 import com.company.enroller.model.Meeting;

@@ -2,6 +2,7 @@ package com.company.enroller.persistence;
 
 import java.util.Collection;
 
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 
 import com.company.enroller.model.Participant;
@@ -16,7 +17,9 @@ public class ParticipantService {
 	}
 
 	public Collection<Participant> getAll() {
-		return connector.getSession().createCriteria(Participant.class).list();
+		String hql = "FROM Participant";
+		Query query = connector.getSession().createQuery(hql);
+		return query.list();
 	}
 
 }
